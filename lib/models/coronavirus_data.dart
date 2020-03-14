@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'coronavirus_data.g.dart';
@@ -8,28 +10,28 @@ class CoronavirusData {
   String countryOther;
 
   @JsonKey(name: 'TotalCases')
-  String totalCases;
+  int totalCases;
 
   @JsonKey(name: 'NewCases')
-  String newCases;
+  int newCases;
 
   @JsonKey(name: 'TotalDeaths')
-  String totalDeaths;
+  int totalDeaths;
 
   @JsonKey(name: 'NewDeaths')
-  String newDeaths;
+  int newDeaths;
 
   @JsonKey(name: 'TotalRecovered')
-  String totalRecovered;
+  int totalRecovered;
 
   @JsonKey(name: 'ActiveCases')
-  String activeCases;
+  int activeCases;
 
   @JsonKey(name: 'Serious,Critical')
-  String seriousCritical;
+  int seriousCritical;
 
   @JsonKey(name: 'Tot Cases/1M pop')
-  String casesPerMillion;
+  double casesPerMillion;
 
   CoronavirusData({
     this.countryOther,
